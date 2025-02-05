@@ -40,7 +40,13 @@ function displaySkills() {
     skills.forEach(skill => {
         const skillCard = document.createElement("div");
         skillCard.classList.add("skill-card");
+        skillCard.classList.add("swiper-slide");
 
+        
+        skillCard.style.display = "flex";
+        skillCard.style.flexDirection = "column";
+        skillCard.style.justifyContent = "center";
+        skillCard.style.alignItems = "center";
         skillCard.innerHTML = `
             <img src="${skill.image}" alt="${skill.name}">
             <h3>${skill.name}</h3>
